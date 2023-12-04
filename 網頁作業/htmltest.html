@@ -88,6 +88,8 @@
         .sub-button {
             background-color: transparent;
             border: 0;
+            margin: 40px;
+            pointer-events: auto;
         }
 
         .sub-button img {
@@ -101,24 +103,25 @@
         }
 
         /* 計算子按鈕的位置 */
-        .sub-buttons .sub-button:nth-child(1) { transform: translate(-50%, -50%) rotate(0deg) translateX(750px) translateY(30px); }
-        .sub-buttons .sub-button:nth-child(2) { transform: translate(-50%, -50%) rotate(5deg) translateX(680px) translateY(35px); }
-        .sub-buttons .sub-button:nth-child(3) { transform: translate(-50%, -50%) rotate(10deg) translateX(590px) translateY(38px); }
-        .sub-buttons .sub-button:nth-child(4) { transform: translate(-50%, -50%) rotate(15deg) translateX(510px) translateY(35px); }
-        .sub-buttons .sub-button:nth-child(5) { transform: translate(-50%, -50%) rotate(80deg) translateX(200px) translateY(0); }
-        .sub-buttons .sub-button:nth-child(6) { transform: translate(-50%, -50%) rotate(100deg) translateX(200px) translateY(0); }
-        .sub-buttons .sub-button:nth-child(7) { transform: translate(-50%, -50%) rotate(120deg) translateX(200px) translateY(0); }
-        .sub-buttons .sub-button:nth-child(8) { transform: translate(-50%, -50%) rotate(140deg) translateX(200px) translateY(0); }
-        .sub-buttons .sub-button:nth-child(9) { transform: translate(-50%, -50%) rotate(160deg) translateX(200px) translateY(0); }
-        .sub-buttons .sub-button:nth-child(10) { transform: translate(-50%, -50%) rotate(180deg) translateX(200px) translateY(0); }
-        .sub-buttons .sub-button:nth-child(11) { transform: translate(-50%, -50%) rotate(200deg) translateX(200px) translateY(0); }
-        .sub-buttons .sub-button:nth-child(12) { transform: translate(-50%, -50%) rotate(220deg) translateX(200px) translateY(0); }
-        .sub-buttons .sub-button:nth-child(13) { transform: translate(-50%, -50%) rotate(240deg) translateX(200px) translateY(0); }
-        .sub-buttons .sub-button:nth-child(14) { transform: translate(-50%, -50%) rotate(260deg) translateX(200px) translateY(0); }
-        .sub-buttons .sub-button:nth-child(15) { transform: translate(-50%, -50%) rotate(280deg) translateX(200px) translateY(0); }
-        .sub-buttons .sub-button:nth-child(16) { transform: translate(-50%, -50%) rotate(300deg) translateX(200px) translateY(0); }
-        .sub-buttons .sub-button:nth-child(17) { transform: translate(-50%, -50%) rotate(320deg) translateX(200px) translateY(0); }
-        .sub-buttons .sub-button:nth-child(18) { transform: translate(-50%, -50%) rotate(340deg) translateX(200px) translateY(0); }
+        .sub-buttons .sub-button:nth-child(1) { transform: translate(-50%, -50%) translateX(650px) translateY(-100px); }
+        .sub-buttons .sub-button:nth-child(2) { transform: translate(-50%, -50%) translateX(650px) translateY(-100px); }
+        .sub-buttons .sub-button:nth-child(3) { transform: translate(-50%, -50%) translateX(650px) translateY(-100px);}
+        .sub-buttons .sub-button:nth-child(4) { transform: translate(-50%, -50%) translateX(650px) translateY(-100px); }
+        .sub-buttons .sub-button:nth-child(5) { transform: translate(-50%, -50%) translateX(650px) translateY(-100px); }
+        .sub-buttons .sub-button:nth-child(6) { transform: translate(-50%, -50%) translateX(650px) translateY(-100px); }
+        .sub-buttons .sub-button:nth-child(7) { transform: translate(-50%, -50%) translateX(650px) translateY(-100px);}
+        .sub-buttons .sub-button:nth-child(8) { transform: translate(-50%, -50%) translateX(650px) translateY(-100px); }
+        .sub-buttons .sub-button:nth-child(9) { transform: translate(-50%, -50%) translateX(650px) translateY(-100px); }
+    
+        .sub-buttons .sub-button:nth-child(10) { transform: translate(-50%, -50%) translateX(-650px) translateY(200px); }
+        .sub-buttons .sub-button:nth-child(11) { transform: translate(-50%, -50%) translateX(-650px) translateY(200px);}
+        .sub-buttons .sub-button:nth-child(12) { transform: translate(-50%, -50%) translateX(-650px) translateY(200px);}
+        .sub-buttons .sub-button:nth-child(13) { transform: translate(-50%, -50%) translateX(-650px) translateY(200px) ;}
+        .sub-buttons .sub-button:nth-child(14) { transform: translate(-50%, -50%) translateX(-650px) translateY(200px);}
+        .sub-buttons .sub-button:nth-child(15) { transform: translate(-50%, -50%) translateX(-650px) translateY(200px); }
+        .sub-buttons .sub-button:nth-child(16) { transform: translate(-50%, -50%) translateX(-650px) translateY(200px) ;}
+        .sub-buttons .sub-button:nth-child(17) { transform: translate(-50%, -50%) translateX(-650px) translateY(200px);}
+        .sub-buttons .sub-button:nth-child(18) { transform: translate(-50%, -50%) translateX(-650px) translateY(200px) ;}
     </style>
 </head>
 <body>
@@ -135,64 +138,64 @@
             </button>
             <div class="sub-buttons">
                 <button class="sub-button" onclick="handleSubButtonClick(1)">
-                    <img src="image/1.png" alt="pokemon 1">
+                    <img src="image/Bug.png" alt="Bug">
                 </button>
                 
                 <button class="sub-button" onclick="handleSubButtonClick(2)">
-                    <img src="image/2.png" alt="pokemon 2">
+                    <img src="image/Dark.png" alt="Dark">
                 </button>
                 
                 <button class="sub-button" onclick="handleSubButtonClick(3)">
-                    <img src="image/3.png" alt="pokemon 3">
+                    <img src="image/Dragon.png" alt="Dragon">
                 </button>
                 <button class="sub-button" onclick="handleSubButtonClick(4)">
-                    <img src="image/4.png" alt="pokemon 4">
+                    <img src="image/Electric.png" alt="Electric">
                 </button>
                 <button class="sub-button" onclick="handleSubButtonClick(5)">
-                    <img src="image/5.png" alt="pokemon 5">
+                    <img src="image/Fairy.png" alt="Fairy">
                 </button>
                 <button class="sub-button" onclick="handleSubButtonClick(6)">
-                    <img src="image/6.png" alt="pokemon 6">
+                    <img src="image/Fighting.png" alt="Fighting">
                 </button>
                 <button class="sub-button" onclick="handleSubButtonClick(7)">
-                    <img src="image/7.png" alt="pokemon 7">
+                    <img src="image/Fire.png" alt="Fire">
                 </button>
                 
                 <button class="sub-button" onclick="handleSubButtonClick(8)">
-                    <img src="image/8.png" alt="pokemon 8">
+                    <img src="image/Flying.png" alt="Flying">
                 </button>
                 
                 <button class="sub-button" onclick="handleSubButtonClick(9)">
-                    <img src="image/9.png" alt="pokemon 9">
+                    <img src="image/Ghost.png" alt="Ghost">
                 </button>
                 <button class="sub-button" onclick="handleSubButtonClick(10)">
-                    <img src="image/10.png" alt="pokemon 10">
+                    <img src="image/Grass.png" alt="Grass">
                 </button>
                 <button class="sub-button" onclick="handleSubButtonClick(11)">
-                    <img src="image/11.png" alt="pokemon 11">
+                    <img src="image/Ground.png" alt="Ground">
                 </button>
                 <button class="sub-button" onclick="handleSubButtonClick(12)">
-                    <img src="image/12.png" alt="pokemon 12">
+                    <img src="image/Ice.png" alt="Ice">
                 </button>
                 <button class="sub-button" onclick="handleSubButtonClick(13)">
-                    <img src="image/13.png" alt="pokemon 13">
+                    <img src="image/Normal.png" alt="Normal">
                 </button>
                 
                 <button class="sub-button" onclick="handleSubButtonClick(14)">
-                    <img src="image/14.png" alt="pokemon 14">
+                    <img src="image/Poison.png" alt="Poison">
                 </button>
                 
                 <button class="sub-button" onclick="handleSubButtonClick(15)">
-                    <img src="image/15.png" alt="pokemon 15">
+                    <img src="image/Psychic.png" alt="Psychic">
                 </button>
                 <button class="sub-button" onclick="handleSubButtonClick(16)">
-                    <img src="image/16.png" alt="pokemon 16">
+                    <img src="image/Rock.png" alt="Rock">
                 </button>
                 <button class="sub-button" onclick="handleSubButtonClick(17)">
-                    <img src="image/17.png" alt="pokemon 17">
+                    <img src="image/Steel.png" alt="Steel">
                 </button>
                 <button class="sub-button" onclick="handleSubButtonClick(18)">
-                    <img src="image/18.png" alt="pokemon 18">
+                    <img src="image/Water.png" alt="Water">
                 </button>
                 <!-- Add more sub-buttons as needed -->
             </div>
@@ -212,8 +215,8 @@
     }
 
     function handleSubButtonClick(subButtonNumber) {
-        // Handle sub-button click as needed
-        alert('You clicked sub-button ' + subButtonNumber);
+        // Open a new window or tab with the appropriate content
+        window.open('subpage.html?subButton=' + subButtonNumber, '_blank');
     }
 </script>
 

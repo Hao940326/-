@@ -11,7 +11,7 @@
             margin: 0;
             padding: 0;
         }
-        .buttonbody{
+        .buttonbody {
             display: flex;
             justify-content: center;
             align-items: center;
@@ -49,73 +49,175 @@
             width: 100%;
         }
         .container {
-          height: 200px;
-          position: relative;
-          border:0;
+            height: 200px;
+            position: relative;
+            border: 0;
         }
 
         .center {
             margin: 0;
             position: absolute;
-            top: 150%;
+            top: 120%;
             left: 50%;
-            -ms-transform: translate(-50%, -50%);
             transform: translate(-50%, -50%);
         }
 
-        .pokemonbutton{
+        .pokemonbutton {
             background-color: transparent;
             border: 0;
         }
-        .pokemonbutton:active{
-            transform: rotate(1080deg);
-            transition: 1.5s;
-        }
+
         .sub-buttons {
             position: absolute;
             top: 50%;
             left: 50%;
+            transform: translate(-50%, -50%);
             display: flex;
             justify-content: space-around;
             align-items: center;
             opacity: 0;
-            pointer-events: none; /* 隱藏子按鈕時禁用它們 */
+            pointer-events: none;
             transition: opacity 0.3s ease-in-out;
         }
-        
-        
+
+        .pokemonbutton.active .sub-buttons {
+            opacity: 1;
+            pointer-events: auto;
+        }
+
+        .sub-button {
+            background-color: transparent;
+            border: 0;
+            margin: 40px;
+        }
+
+        .sub-button img {
+            width: 50px;
+            height: 50px;
+        }
+
+        .pokemonbutton:active {
+            transform: rotate(1080deg);
+            transition: 1.5s;
+        }
+
+        /* 計算子按鈕的位置 */
+        .sub-buttons .sub-button:nth-child(1) { transform: translate(-50%, -50%) translateX(650px) translateY(-100px); }
+        .sub-buttons .sub-button:nth-child(2) { transform: translate(-50%, -50%) translateX(650px) translateY(-100px); }
+        .sub-buttons .sub-button:nth-child(3) { transform: translate(-50%, -50%) translateX(650px) translateY(-100px);}
+        .sub-buttons .sub-button:nth-child(4) { transform: translate(-50%, -50%) translateX(650px) translateY(-100px); }
+        .sub-buttons .sub-button:nth-child(5) { transform: translate(-50%, -50%) translateX(650px) translateY(-100px); }
+        .sub-buttons .sub-button:nth-child(6) { transform: translate(-50%, -50%) translateX(650px) translateY(-100px); }
+        .sub-buttons .sub-button:nth-child(7) { transform: translate(-50%, -50%) translateX(650px) translateY(-100px);}
+        .sub-buttons .sub-button:nth-child(8) { transform: translate(-50%, -50%) translateX(650px) translateY(-100px); }
+        .sub-buttons .sub-button:nth-child(9) { transform: translate(-50%, -50%) translateX(650px) translateY(-100px); }
+    
+        .sub-buttons .sub-button:nth-child(10) { transform: translate(-50%, -50%) translateX(-650px) translateY(200px); }
+        .sub-buttons .sub-button:nth-child(11) { transform: translate(-50%, -50%) translateX(-650px) translateY(200px);}
+        .sub-buttons .sub-button:nth-child(12) { transform: translate(-50%, -50%) translateX(-650px) translateY(200px);}
+        .sub-buttons .sub-button:nth-child(13) { transform: translate(-50%, -50%) translateX(-650px) translateY(200px) ;}
+        .sub-buttons .sub-button:nth-child(14) { transform: translate(-50%, -50%) translateX(-650px) translateY(200px);}
+        .sub-buttons .sub-button:nth-child(15) { transform: translate(-50%, -50%) translateX(-650px) translateY(200px); }
+        .sub-buttons .sub-button:nth-child(16) { transform: translate(-50%, -50%) translateX(-650px) translateY(200px) ;}
+        .sub-buttons .sub-button:nth-child(17) { transform: translate(-50%, -50%) translateX(-650px) translateY(200px);}
+        .sub-buttons .sub-button:nth-child(18) { transform: translate(-50%, -50%) translateX(-650px) translateY(200px) ;}
     </style>
 </head>
 <body>
 
-    <header>
-        <h1>歡迎來到寶可夢世界</h1>
-    </header>
-       
-    
-    <div class="container">
-        <div class="center">
-            <div class="pokemonbutton">
-                <button type="button" value=".pokemonbutton"style="background-color: transparent;border: 0;"><img src="image/寶貝球-fotor-bg-remover-20231129151023.png" alt="pokemon ball"  width="200"height="200"></button>
+<header>
+    <h1>歡迎來到寶可夢世界</h1>
+</header>
+
+<div class="container">
+    <div class="center">
+        <div class="pokemonbutton" onclick="toggleSubButtons()">
+            <button type="button" value=".pokemonbutton" style="background-color: transparent; border: 0;">
+                <img src="image/寶貝球-fotor-bg-remover-20231129151023.png" alt="pokemon ball" width="200" height="200">
+            </button>
+            <div class="sub-buttons">
+                <button class="sub-button" onclick="handleSubButtonClick(1)">
+                    <img src="image/Bug.png" alt="Bug">
+                </button>
+                
+                <button class="sub-button" onclick="handleSubButtonClick(2)">
+                    <img src="image/Dark.png" alt="Dark">
+                </button>
+                
+                <button class="sub-button" onclick="handleSubButtonClick(3)">
+                    <img src="image/Dragon.png" alt="Dragon">
+                </button>
+                <button class="sub-button" onclick="handleSubButtonClick(4)">
+                    <img src="image/Electric.png" alt="Electric">
+                </button>
+                <button class="sub-button" onclick="handleSubButtonClick(5)">
+                    <img src="image/Fairy.png" alt="Fairy">
+                </button>
+                <button class="sub-button" onclick="handleSubButtonClick(6)">
+                    <img src="image/Fighting.png" alt="Fighting">
+                </button>
+                <button class="sub-button" onclick="handleSubButtonClick(7)">
+                    <img src="image/Fire.png" alt="Fire">
+                </button>
+                
+                <button class="sub-button" onclick="handleSubButtonClick(8)">
+                    <img src="image/Flying.png" alt="Flying">
+                </button>
+                
+                <button class="sub-button" onclick="handleSubButtonClick(9)">
+                    <img src="image/Ghost.png" alt="Ghost">
+                </button>
+                <button class="sub-button" onclick="handleSubButtonClick(10)">
+                    <img src="image/Grass.png" alt="Grass">
+                </button>
+                <button class="sub-button" onclick="handleSubButtonClick(11)">
+                    <img src="image/Ground.png" alt="Ground">
+                </button>
+                <button class="sub-button" onclick="handleSubButtonClick(12)">
+                    <img src="image/Ice.png" alt="Ice">
+                </button>
+                <button class="sub-button" onclick="handleSubButtonClick(13)">
+                    <img src="image/Normal.png" alt="Normal">
+                </button>
+                
+                <button class="sub-button" onclick="handleSubButtonClick(14)">
+                    <img src="image/Poison.png" alt="Poison">
+                </button>
+                
+                <button class="sub-button" onclick="handleSubButtonClick(15)">
+                    <img src="image/Psychic.png" alt="Psychic">
+                </button>
+                <button class="sub-button" onclick="handleSubButtonClick(16)">
+                    <img src="image/Rock.png" alt="Rock">
+                </button>
+                <button class="sub-button" onclick="handleSubButtonClick(17)">
+                    <img src="image/Steel.png" alt="Steel">
+                </button>
+                <button class="sub-button" onclick="handleSubButtonClick(18)">
+                    <img src="image/Water.png" alt="Water">
+                </button>
+                <!-- Add more sub-buttons as needed -->
             </div>
         </div>
     </div>
-    
+</div>
 
-    
-    <!--
-       <section>
-        <h2>寶可夢介紹</h2>
-        <p>寶可夢是一個由任天堂、遊戲寶、智冠等公司開發的角色扮演遊戲系列。在寶可夢世界中，訓練師可以捕捉、訓練並對戰各種不同種類的寶可夢。</p>
-        <p>寶可夢的世界中有各種神奇的生物，每一種寶可夢都擁有獨特的屬性和技能。訓練師的目標是成為寶可夢大師，收集並培養各種強大的寶可夢。</p>
-    </section> 
-    -->
-    
-    <footer>
-        <p>&copy; 寶可夢圖鑑</p>
-        <audio autoplay="autoplay" controls="controls"loop="loop" preload="auto" src="music/pokemon_music.mp3">
-        </audio>
-    </footer>
+<footer>
+    <p>&copy; 寶可夢圖鑑</p>
+    <audio autoplay="autoplay" controls="controls" loop="loop" preload="auto" src="music/pokemon_music.mp3"></audio>
+</footer>
+
+<script>
+    function toggleSubButtons() {
+        const pokemonButton = document.querySelector('.pokemonbutton');
+        pokemonButton.classList.toggle('active');
+    }
+
+    function handleSubButtonClick(subButtonNumber) {
+        // Handle sub-button click as needed
+        alert('You clicked sub-button ' + subButtonNumber);
+    }
+</script>
 
 </body>
 </html>
