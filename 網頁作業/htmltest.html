@@ -1,0 +1,221 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #AED6F1;
+            margin: 0;
+            padding: 0;
+        }
+        .buttonbody {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+        }
+        header {
+            background-color: #333;
+            color: #fff;
+            padding: 10px;
+            text-align: center;
+        }
+    
+        section {
+            max-width: 800px;
+            margin: 20px auto;
+            padding: 20px;
+            background-color: #fff;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+        h2 {
+            color: #333;
+        }
+        p {
+            color: #666;
+        }
+        footer {
+            background-color: #333;
+            color: #fff;
+            padding: 10px;
+            text-align: center;
+            position: fixed;
+            bottom: 0;
+            width: 100%;
+        }
+        .container {
+            height: 200px;
+            position: relative;
+            border: 0;
+        }
+
+        .center {
+            margin: 0;
+            position: absolute;
+            top: 120%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+        }
+
+        .pokemonbutton {
+            background-color: transparent;
+            border: 0;
+        }
+
+        .sub-buttons {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+            opacity: 0;
+            pointer-events: none;
+            transition: opacity 0.3s ease-in-out;
+        }
+
+        .pokemonbutton.active .sub-buttons {
+            opacity: 1;
+            pointer-events: auto;
+        }
+
+        .sub-button {
+            background-color: transparent;
+            border: 0;
+        }
+
+        .sub-button img {
+            width: 50px;
+            height: 50px;
+        }
+
+        .pokemonbutton:active {
+            transform: rotate(1080deg);
+            transition: 1.5s;
+        }
+
+        /* 計算子按鈕的位置 */
+        .sub-buttons .sub-button:nth-child(1) { transform: translate(-50%, -50%) rotate(0deg) translateX(750px) translateY(30px); }
+        .sub-buttons .sub-button:nth-child(2) { transform: translate(-50%, -50%) rotate(5deg) translateX(680px) translateY(35px); }
+        .sub-buttons .sub-button:nth-child(3) { transform: translate(-50%, -50%) rotate(10deg) translateX(590px) translateY(38px); }
+        .sub-buttons .sub-button:nth-child(4) { transform: translate(-50%, -50%) rotate(15deg) translateX(510px) translateY(35px); }
+        .sub-buttons .sub-button:nth-child(5) { transform: translate(-50%, -50%) rotate(80deg) translateX(200px) translateY(0); }
+        .sub-buttons .sub-button:nth-child(6) { transform: translate(-50%, -50%) rotate(100deg) translateX(200px) translateY(0); }
+        .sub-buttons .sub-button:nth-child(7) { transform: translate(-50%, -50%) rotate(120deg) translateX(200px) translateY(0); }
+        .sub-buttons .sub-button:nth-child(8) { transform: translate(-50%, -50%) rotate(140deg) translateX(200px) translateY(0); }
+        .sub-buttons .sub-button:nth-child(9) { transform: translate(-50%, -50%) rotate(160deg) translateX(200px) translateY(0); }
+        .sub-buttons .sub-button:nth-child(10) { transform: translate(-50%, -50%) rotate(180deg) translateX(200px) translateY(0); }
+        .sub-buttons .sub-button:nth-child(11) { transform: translate(-50%, -50%) rotate(200deg) translateX(200px) translateY(0); }
+        .sub-buttons .sub-button:nth-child(12) { transform: translate(-50%, -50%) rotate(220deg) translateX(200px) translateY(0); }
+        .sub-buttons .sub-button:nth-child(13) { transform: translate(-50%, -50%) rotate(240deg) translateX(200px) translateY(0); }
+        .sub-buttons .sub-button:nth-child(14) { transform: translate(-50%, -50%) rotate(260deg) translateX(200px) translateY(0); }
+        .sub-buttons .sub-button:nth-child(15) { transform: translate(-50%, -50%) rotate(280deg) translateX(200px) translateY(0); }
+        .sub-buttons .sub-button:nth-child(16) { transform: translate(-50%, -50%) rotate(300deg) translateX(200px) translateY(0); }
+        .sub-buttons .sub-button:nth-child(17) { transform: translate(-50%, -50%) rotate(320deg) translateX(200px) translateY(0); }
+        .sub-buttons .sub-button:nth-child(18) { transform: translate(-50%, -50%) rotate(340deg) translateX(200px) translateY(0); }
+    </style>
+</head>
+<body>
+
+<header>
+    <h1>歡迎來到寶可夢世界</h1>
+</header>
+
+<div class="container">
+    <div class="center">
+        <div class="pokemonbutton" onclick="toggleSubButtons()">
+            <button type="button" value=".pokemonbutton" style="background-color: transparent; border: 0;">
+                <img src="image/寶貝球-fotor-bg-remover-20231129151023.png" alt="pokemon ball" width="200" height="200">
+            </button>
+            <div class="sub-buttons">
+                <button class="sub-button" onclick="handleSubButtonClick(1)">
+                    <img src="image/1.png" alt="pokemon 1">
+                </button>
+                
+                <button class="sub-button" onclick="handleSubButtonClick(2)">
+                    <img src="image/2.png" alt="pokemon 2">
+                </button>
+                
+                <button class="sub-button" onclick="handleSubButtonClick(3)">
+                    <img src="image/3.png" alt="pokemon 3">
+                </button>
+                <button class="sub-button" onclick="handleSubButtonClick(4)">
+                    <img src="image/4.png" alt="pokemon 4">
+                </button>
+                <button class="sub-button" onclick="handleSubButtonClick(5)">
+                    <img src="image/5.png" alt="pokemon 5">
+                </button>
+                <button class="sub-button" onclick="handleSubButtonClick(6)">
+                    <img src="image/6.png" alt="pokemon 6">
+                </button>
+                <button class="sub-button" onclick="handleSubButtonClick(7)">
+                    <img src="image/7.png" alt="pokemon 7">
+                </button>
+                
+                <button class="sub-button" onclick="handleSubButtonClick(8)">
+                    <img src="image/8.png" alt="pokemon 8">
+                </button>
+                
+                <button class="sub-button" onclick="handleSubButtonClick(9)">
+                    <img src="image/9.png" alt="pokemon 9">
+                </button>
+                <button class="sub-button" onclick="handleSubButtonClick(10)">
+                    <img src="image/10.png" alt="pokemon 10">
+                </button>
+                <button class="sub-button" onclick="handleSubButtonClick(11)">
+                    <img src="image/11.png" alt="pokemon 11">
+                </button>
+                <button class="sub-button" onclick="handleSubButtonClick(12)">
+                    <img src="image/12.png" alt="pokemon 12">
+                </button>
+                <button class="sub-button" onclick="handleSubButtonClick(13)">
+                    <img src="image/13.png" alt="pokemon 13">
+                </button>
+                
+                <button class="sub-button" onclick="handleSubButtonClick(14)">
+                    <img src="image/14.png" alt="pokemon 14">
+                </button>
+                
+                <button class="sub-button" onclick="handleSubButtonClick(15)">
+                    <img src="image/15.png" alt="pokemon 15">
+                </button>
+                <button class="sub-button" onclick="handleSubButtonClick(16)">
+                    <img src="image/16.png" alt="pokemon 16">
+                </button>
+                <button class="sub-button" onclick="handleSubButtonClick(17)">
+                    <img src="image/17.png" alt="pokemon 17">
+                </button>
+                <button class="sub-button" onclick="handleSubButtonClick(18)">
+                    <img src="image/18.png" alt="pokemon 18">
+                </button>
+                <!-- Add more sub-buttons as needed -->
+            </div>
+        </div>
+    </div>
+</div>
+
+<footer>
+    <p>&copy; 寶可夢圖鑑</p>
+    <audio autoplay="autoplay" controls="controls" loop="loop" preload="auto" src="music/pokemon_music.mp3"></audio>
+</footer>
+
+<script>
+    function toggleSubButtons() {
+        const pokemonButton = document.querySelector('.pokemonbutton');
+        pokemonButton.classList.toggle('active');
+    }
+
+    function handleSubButtonClick(subButtonNumber) {
+        // Handle sub-button click as needed
+        alert('You clicked sub-button ' + subButtonNumber);
+    }
+</script>
+
+</body>
+</html>
