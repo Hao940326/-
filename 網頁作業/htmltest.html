@@ -69,15 +69,16 @@
 
         .sub-buttons {
             position: absolute;
-        top: 50%;
-        left: 50%;
-        display: flex;
-        justify-content: space-around;
-        align-items: center;
-        opacity: 0;
-        pointer-events: none;
-        transition: opacity 0.3s ease-in-out;
-        z-index: 1;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+            opacity: 0;
+            pointer-events: none;
+            transition: opacity 0.3s ease-in-out;
+            z-index: 1; /* 設置 z-index 以確保子按鈕顯示在主按鈕之上 */
         }
 
         .pokemonbutton.active .sub-buttons {
@@ -227,6 +228,54 @@
                 break;
             case 2:
                 window.open('pagination/Dark.html', '_blank');
+                break;
+            case 3:
+                window.open('pagination/Dragon.html', '_blank');
+                break;
+            case 4:
+                window.open('pagination/Electric.html', '_blank');
+                break;
+            case 5:
+                window.open('pagination/Fairy.html', '_blank');
+                break;
+            case 6:
+                window.open('pagination/Fighting.html', '_blank');
+                break;
+            case 7:
+                window.open('pagination/Fire.html', '_blank');
+                break;
+            case 8:
+                window.open('pagination/Flying.html', '_blank');
+                break;
+            case 9:
+                window.open('pagination/Ghost.html', '_blank');
+                break;
+            case 10:
+                window.open('pagination/Grass.html', '_blank');
+                break;
+            case 11:
+                window.open('pagination/Ground.html', '_blank');
+                break;
+            case 12:
+                window.open('pagination/Ice.html', '_blank');
+                break;
+            case 13:
+                window.open('pagination/Normal.html', '_blank');
+                break;
+            case 14:
+                window.open('pagination/Poison.html', '_blank');
+                break;
+            case 15:
+                window.open('pagination/Psychic.html', '_blank');
+                break;
+            case 16:
+                window.open('pagination/Rock.html', '_blank');
+                break;
+            case 17:
+                window.open('pagination/Steel.html', '_blank');
+                break;
+            case 18:
+                window.open('pagination/Water.html', '_blank');
                 break;
             // 添加其他子按鈕的情況
             default:

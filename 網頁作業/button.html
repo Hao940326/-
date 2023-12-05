@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>旋轉按鈕</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #F0F0F0;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+
+        .container {
+            position: relative;
+        }
+
+        button {
+            position: absolute;
+            bottom: 0;
+            right: 0;
+            background-color: #3498db;
+            color: #fff;
+            border: none;
+            padding: 10px;
+            cursor: pointer;
+            border-radius: 5px;
+            outline: none;
+        }
+
+        img {
+            width: 100px; /* 調整圖片大小 */
+            height: 100px;
+            animation: rotate 2s linear infinite;
+        }
+
+        @keyframes rotate {
+            from {
+                transform: rotate(0deg);
+            }
+            to {
+                transform: rotate(360deg);
+            }
+        }
+    </style>
+</head>
+<body>
+
+<div class="container">
+    <button onclick="handleButtonClick()"><img id="rotatingImage" src="../image/寶貝球-fotor-bg-remover-20231129151023.png" alt="Rotating Image"style="background-color: transparent; border: 0;"></button>
+    
+</div>
+
+<script>
+    function handleButtonClick() {
+        // 在這裡添加按鈕點擊後的操作
+        alert('Button Clicked!');
+    }
+</script>
+
+</body>
+</html>
