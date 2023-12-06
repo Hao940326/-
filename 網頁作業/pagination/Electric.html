@@ -1,8 +1,10 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="../image/Electric.png">
     <title>寶可夢資訊</title>
     <style>
         body {
@@ -11,12 +13,14 @@
             margin: 0;
             padding: 0;
         }
+
         header {
             background-color: #3498db;
             color: #fff;
             padding: 10px;
             text-align: center;
         }
+
         section {
             max-width: 800px;
             margin: 20px auto;
@@ -25,48 +29,109 @@
             border-radius: 8px;
             box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
         }
-        h2 {
-            color: #333;
+
+        .buttonbody {
+            font-family: Arial, sans-serif;
+            background-color: transparent;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
         }
-        p {
-            color: #666;
+
+        .buttoncontainer {
+            position: relative;
+        }
+
+        button {
+            position: fixed;
+            /* 修改為 fixed */
+            bottom: 20px;
+            /* 調整底部距離 */
+            right: 20px;
+            /* 調整右側距離 */
+            background-color: transparent;
+            color: #fff;
+            border: none;
+            padding: 10px;
+            cursor: pointer;
+            border-radius: 5px;
+            outline: none;
+            transform-origin: center; /* 設置旋轉中心為按鈕中心 */
+        }
+
+        img {
+            width: 100px;
+            /* 調整圖片大小 */
+            height: 100px;
+            animation: rotate 2s linear infinite;
+        }
+
+        @keyframes rotate {
+            from {
+                transform: rotate(0deg);
+            }
+
+            to {
+                transform: rotate(360deg);
+            }
         }
     </style>
 </head>
+
 <body>
 
-<header>
-    <h1>寶可夢資訊</h1>
-</header>
+    <header>
+        <h1>寶可夢資訊</h1>
+    </header>
 
-<section>
-    <h2>寶可夢名稱: Pikachu</h2>
-    <p><strong>屬性:</strong> Electric</p>
-    <p><strong>特點:</strong> 以閃電為主要攻擊方式，可進行快速移動。</p>
-    
-    <h3>進化條件:</h3>
-    <ul>
-        <li>進化成 Raichu 需要使用雷之石</li>
-    </ul>
-    
-    <h3>技能列表:</h3>
-    <ul>
-        <li>電擊</li>
-        <li>快速攻擊</li>
-        <li>伏特攻擊</li>
-    </ul>
-    
-    <h3>基本屬性值:</h3>
-    <ul>
-        <li><strong>生命力：</strong> 60</li>
-        <li><strong>攻擊力：</strong> 55</li>
-        <li><strong>防禦力：</strong> 40</li>
-        <li><strong>速度：</strong> 90</li>
-    </ul>
-    
-    <h3>描述:</h3>
-    <p>Pikachu 是一種小型的電氣寶可夢，外表呈現黃色的毛茸茸造型，非常受歡迎。牠是電氣屬性的寶可夢，主要以電擊技能進行攻擊，速度敏捷，是許多訓練家的首選。</p>
-</section>
+    <section>
+        <h2>寶可夢名稱: Pikachu</h2>
+        <p><strong>屬性:</strong> Electric</p>
+        <p><strong>特點:</strong> 以閃電為主要攻擊方式，可進行快速移動。</p>
 
+        <h3>進化條件:</h3>
+        <ul>
+            <li>進化成 Raichu 需要使用雷之石</li>
+        </ul>
+
+        <h3>技能列表:</h3>
+        <ul>
+            <li>電擊</li>
+            <li>快速攻擊</li>
+            <li>伏特攻擊</li>
+        </ul>
+
+        <h3>基本屬性值:</h3>
+        <ul>
+            <li><strong>生命力：</strong> 60</li>
+            <li><strong>攻擊力：</strong> 55</li>
+            <li><strong>防禦力：</strong> 40</li>
+            <li><strong>速度：</strong> 90</li>
+        </ul>
+
+        <h3>描述:</h3>
+        <p>Pikachu 是一種小型的電氣寶可夢，外表呈現黃色的毛茸茸造型，非常受歡迎。牠是電氣屬性的寶可夢，主要以電擊技能進行攻擊，速度敏捷，是許多訓練家的首選。</p>
+    </section>
+
+    <div class="buttoncontainer">
+        <div class="buttonbody">
+            <div class="buttonimg">
+                <button onclick="goToHome()"><img id="rotatingImage"
+                        src="../image/寶貝球-fotor-bg-remover-20231129151023.png" alt="Rotating Image"
+                        style="background-color: transparent; border: 0;"></button>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        function goToHome() {
+            // 在這裡添加返回 Home.html 的操作
+            window.history.go(-1) ;
+        }
+    </script>
 </body>
+
 </html>

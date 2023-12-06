@@ -7,7 +7,7 @@
     <style>
         body {
             font-family: Arial, sans-serif;
-            background-color: #F0F0F0;
+            background-color: transparent;
             margin: 0;
             padding: 0;
             display: flex;
@@ -21,10 +21,10 @@
         }
 
         button {
-            position: absolute;
-            bottom: 0;
-            right: 0;
-            background-color: #3498db;
+            position: fixed; /* 修改為 fixed */
+            bottom: 20px; /* 調整底部距離 */
+            right: 20px; /* 調整右側距離 */
+            background-color: transparent;
             color: #fff;
             border: none;
             padding: 10px;
@@ -52,7 +52,7 @@
 <body>
 
 <div class="container">
-    <button onclick="handleButtonClick()"><img id="rotatingImage" src="../image/寶貝球-fotor-bg-remover-20231129151023.png" alt="Rotating Image"style="background-color: transparent; border: 0;"></button>
+    <button onclick="handleButtonClick()"><img id="rotatingImage" src="image/寶貝球-fotor-bg-remover-20231129151023.png" alt="Rotating Image"style="background-color: transparent; border: 0;"></button>
     
 </div>
 
@@ -65,3 +65,4 @@
 
 </body>
 </html>
+
