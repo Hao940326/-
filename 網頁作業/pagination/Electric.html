@@ -13,14 +13,12 @@
             margin: 0;
             padding: 0;
         }
-
         header {
             background-color: #3498db;
             color: #fff;
             padding: 10px;
             text-align: center;
         }
-
         section {
             max-width: 800px;
             margin: 20px auto;
@@ -29,8 +27,13 @@
             border-radius: 8px;
             box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
         }
-
-        .buttonbody {
+        h2 {
+            color: #333;
+        }
+        p {
+            color: #666;
+        }
+        .ballbuttonbody {
             font-family: Arial, sans-serif;
             background-color: transparent;
             margin: 0;
@@ -41,11 +44,11 @@
             height: 100vh;
         }
 
-        .buttoncontainer {
+        .ballbuttoncontainer {
             position: relative;
         }
 
-        button {
+        .ballbutton {
             position: fixed;
             /* 修改為 fixed */
             bottom: 20px;
@@ -62,7 +65,7 @@
             transform-origin: center; /* 設置旋轉中心為按鈕中心 */
         }
 
-        img {
+        .ballbutton img {
             width: 100px;
             /* 調整圖片大小 */
             height: 100px;
@@ -77,6 +80,24 @@
             to {
                 transform: rotate(360deg);
             }
+        }
+
+        .rolebutton {
+            position: fixed;
+            top: 150px;
+            right: 400px;
+            background-color: transparent;
+            color: #fff;
+            border: none;
+        }
+
+        .rolebutton img {
+            width: 150px;
+            height: 150px;
+        }
+
+        .rolebuttoncontainer {
+            position: relative;
         }
     </style>
 </head>
@@ -116,11 +137,19 @@
         <p>Pikachu 是一種小型的電氣寶可夢，外表呈現黃色的毛茸茸造型，非常受歡迎。牠是電氣屬性的寶可夢，主要以電擊技能進行攻擊，速度敏捷，是許多訓練家的首選。</p>
     </section>
 
-    <div class="buttoncontainer">
-        <div class="buttonbody">
-            <div class="buttonimg">
-                <button onclick="goToHome()"><img id="rotatingImage"
-                        src="../image/寶貝球-fotor-bg-remover-20231129151023.png" alt="Rotating Image"
+    <div class="rolebuttoncontainer">
+        <div class="rolebutton">
+            <button onclick="goToRole()"><img 
+                    src="../image/皮卡丘.png" alt="皮卡丘 Image"
+                    style="background-color: transparent; border: 0;"></button>
+        </div>
+    </div>
+
+    <div class="ballbuttoncontainer">
+        <div class="ballbuttonbody">
+            <div class="ballbuttonimg">
+                <button class="ballbutton" onclick="goToHome()"><img 
+                        src="../image/寶貝球-fotor-bg-remover-20231129151023.png" alt="Rotating button Image"
                         style="background-color: transparent; border: 0;"></button>
             </div>
         </div>
@@ -129,7 +158,15 @@
     <script>
         function goToHome() {
             // 在這裡添加返回 Home.html 的操作
-            window.history.go(-1) ;
+            window.history.go(-1);
+        }
+
+        function goToRole() {
+            // 創建 audio 元素
+            var audio = new Audio('../music/皮卡丘叫聲.mp3');
+            
+            // 播放音樂
+            audio.play();
         }
     </script>
 </body>

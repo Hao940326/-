@@ -8,7 +8,7 @@
     <style>
         body {
             font-family: Arial, sans-serif;
-            background-color: #AED6F1;
+            background-color: #00E7FA;
             margin: 0;
             padding: 0;
         }
@@ -164,6 +164,36 @@
             font-size: 20px;
             font-weight: bold;
         }
+
+        .rightcolorbutton {
+            position: fixed;
+            bottom: 20px;
+            right: 20px;
+            display: flex;
+        }
+
+        .rightcolor-button {
+            background-color: transparent;
+            border: none; /* 移除按鈕的邊框 */
+            margin-right: 0; /* 設置按鈕之間的左邊距 */
+            width: 100px; /* 設置按鈕寬度 */
+            height: 30px; /* 設置按鈕高度 */
+        }
+        
+        .leftcolorbutton {
+            position: fixed;
+            bottom: 20px;
+            left: 20px;
+            display: flex;
+        }
+
+        .leftcolor-button {
+            background-color: transparent;
+            border: none; /* 移除按鈕的邊框 */
+            margin-left: 0; /* 設置按鈕之間的左邊距 */
+            width: 100px; /* 設置按鈕寬度 */
+            height: 30px; /* 設置按鈕高度 */
+        }
     </style>
 </head>
 <body onload="openModal()">
@@ -257,6 +287,70 @@
 
     </div>
 </div>
+<div class="body">
+    <div class="rightcolorbutton">
+        <button class="rightcolor-button" onclick="changeBodyBackgroundColor('#2BA7AD')">
+            <img src="image/2BA7AD.png" alt="#2BA7AD">
+        </button>
+        <button class="rightcolor-button" onclick="changeBodyBackgroundColor('#37777A')">
+            <img src="image/37777A.png" alt="#37777A">
+        </button>
+        <button class="rightcolor-button" onclick="changeBodyBackgroundColor('#0BD4E0')">
+            <img src="image/0BD4E0.png" alt="#0BD4E0">
+        </button>
+        <button class="rightcolor-button" onclick="changeBodyBackgroundColor('#2E4647')">
+            <img src="image/2E4647.png" alt="#2E4647">
+        </button>
+        <button class="rightcolor-button" onclick="changeBodyBackgroundColor('#2B3333')">
+            <img src="image/2B3333.png"  alt="#2B3333">
+        </button>
+    </div>
+</div>
+<div class="header">
+    <div class="footer">
+        <div class="leftcolorbutton">
+            <button class="leftcolor-button" onclick="changeLeftColors('#2BA7AD')">
+                <img src="image/2BA7AD.png" alt="#2BA7AD">
+            </button>
+            <button class="leftcolor-button" onclick="changeLeftColors('#37777A')">
+                <img src="image/37777A.png" alt="#37777A">
+            </button>
+            <button class="leftcolor-button" onclick="changeLeftColors('#0BD4E0')">
+                <img src="image/0BD4E0.png" alt="#0BD4E0">
+            </button>
+            <button class="leftcolor-button" onclick="changeLeftColors('#2E4647')">
+                <img src="image/2E4647.png" alt="#2E4647">
+            </button>
+            <button class="leftcolor-button" onclick="changeLeftColors('#2B3333')">
+                <img src="image/2B3333.png" alt="#2B3333">
+            </button>
+        </div>
+    </div>
+</div>
+
+
+
+    <div class="leftcolorbutton">
+        <button class="leftcolor-button" onclick="changeLeftColors('#2BA7AD')">
+            <img src="image/2BA7AD.png" alt="#2BA7AD">
+        </button>
+        <button class="leftcolor-button" onclick="changeLeftColors('#37777A')">
+            <img src="image/37777A.png" alt="#37777A">
+        </button>
+        <button class="leftcolor-button" onclick="changeLeftColors('#0BD4E0')">
+            <img src="image/0BD4E0.png" alt="#0BD4E0">
+        </button>
+        <button class="leftcolor-button" onclick="changeLeftColors('#2E4647')">
+            <img src="image/2E4647.png" alt="#2E4647">
+        </button>
+        <button class="leftcolor-button" onclick="changeLeftColors('#2B3333')">
+            <img src="image/2B3333.png" alt="#2B3333">
+        </button>
+    </div>
+
+
+
+
 <script>
     function toggleSubButtons() {
         const pokemonButton = document.querySelector('.pokemonbutton');
@@ -337,7 +431,28 @@
     function closeModal() {
         document.getElementById('advertiseoverlay').style.display = 'none';
     }
+
+    function changeFooterAndHeaderBackgroundColor(color) {
+        const footer = document.querySelector('footer');
+        const header = document.querySelector('header');
+        footer.style.backgroundColor = color;
+        header.style.backgroundColor = color;
+    }
+
+    // 左邊按鈕的 onclick 事件
+    function changeLeftColors(color) {
+        changeFooterAndHeaderBackgroundColor(color);
+    }
+
+    function changeBodyBackgroundColor(color) {
+        document.body.style.backgroundColor = color;
+    }
 </script>
 
 </body>
 </html>
+
+
+
+
+ 

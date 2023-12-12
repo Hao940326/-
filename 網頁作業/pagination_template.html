@@ -31,7 +31,7 @@
         p {
             color: #666;
         }
-        .buttonbody {
+        .abuttonbody {
             font-family: Arial, sans-serif;
             background-color: transparent;
             margin: 0;
@@ -42,11 +42,11 @@
             height: 100vh;
         }
 
-        .buttoncontainer {
+        .abuttoncontainer {
             position: relative;
         }
 
-        button {
+        .abutton {
             position: fixed;
             /* 修改為 fixed */
             bottom: 20px;
@@ -63,7 +63,7 @@
             transform-origin: center; /* 設置旋轉中心為按鈕中心 */
         }
 
-        img {
+        .abutton img {
             width: 100px;
             /* 調整圖片大小 */
             height: 100px;
@@ -78,6 +78,28 @@
             to {
                 transform: rotate(360deg);
             }
+        }
+
+        .rolebutton {
+            position: fixed;
+            top: 20px;
+            right: 20px;
+            background-color: transparent;
+            color: #fff;
+            border: none;
+            padding: 10px;
+            cursor: pointer;
+            border-radius: 5px;
+            outline: none;
+        }
+
+        .rolebutton img {
+            width: 100px;
+            height: 100px;
+        }
+
+        .rolebuttoncontainer {
+            position: relative;
         }
     </style>
 </head>
@@ -117,11 +139,20 @@
     <h3>描述:</h3>
     <p>[在這裡添加對這個寶可夢的描述，例如它的生態習性、生活環境等]</p>
 </section>
-<div class="buttoncontainer">
-    <div class="buttonbody">
-        <div class="buttonimg">
-            <button onclick="goToHome()"><img id="rotatingImage"
-                    src="../image/寶貝球-fotor-bg-remover-20231129151023.png" alt="Rotating Image"
+
+<div class="rolebuttoncontainer">
+    <div class="rolebutton">
+        <button onclick="goToRole()"><img 
+                src="../image/皮卡丘.png" alt="皮卡丘 Image"
+                style="background-color: transparent; border: 0;"></button>
+    </div>
+</div>
+
+<div class="ballbuttoncontainer">
+    <div class="ballbuttonbody">
+        <div class="ballbuttonimg">
+            <button class="ballbutton" onclick="goToHome()"><img 
+                    src="../image/寶貝球-fotor-bg-remover-20231129151023.png" alt="Rotating button Image"
                     style="background-color: transparent; border: 0;"></button>
         </div>
     </div>
@@ -130,7 +161,15 @@
 <script>
     function goToHome() {
         // 在這裡添加返回 Home.html 的操作
-        window.history.go(-1) ;
+        window.history.go(-1);
+    }
+
+    function goToRole() {
+        // 創建 audio 元素
+        var audio = new Audio('../music/皮卡丘叫聲.mp3');
+        
+        // 播放音樂
+        audio.play();
     }
 </script>
 </body>
