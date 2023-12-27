@@ -58,7 +58,7 @@
         .center {
             margin: 0;
             position: absolute;
-            top: 120%;
+            top: 150%;
             left: 50%;
             transform: translate(-50%, -50%);
         }
@@ -94,6 +94,14 @@
             margin: 40px;
             pointer-events: auto;
         }
+        .sub-buttons .sub-button {
+            position: absolute;
+            background-color: transparent;
+            border: 0;
+            margin: 40px;
+            pointer-events: auto;
+            transform-origin: 50% 50%; /* 設定旋轉的中心點為按鈕中心 */
+        }
 
         .sub-button img {
             width: 50px;
@@ -107,25 +115,24 @@
         
 
         /* 計算子按鈕的位置 */
-        .sub-buttons .sub-button:nth-child(1) { transform: translate(-50%, -50%) translateX(650px) translateY(-100px); }
-        .sub-buttons .sub-button:nth-child(2) { transform: translate(-50%, -50%) translateX(650px) translateY(-100px); }
-        .sub-buttons .sub-button:nth-child(3) { transform: translate(-50%, -50%) translateX(650px) translateY(-100px);}
-        .sub-buttons .sub-button:nth-child(4) { transform: translate(-50%, -50%) translateX(650px) translateY(-100px); }
-        .sub-buttons .sub-button:nth-child(5) { transform: translate(-50%, -50%) translateX(650px) translateY(-100px); }
-        .sub-buttons .sub-button:nth-child(6) { transform: translate(-50%, -50%) translateX(650px) translateY(-100px); }
-        .sub-buttons .sub-button:nth-child(7) { transform: translate(-50%, -50%) translateX(650px) translateY(-100px);}
-        .sub-buttons .sub-button:nth-child(8) { transform: translate(-50%, -50%) translateX(650px) translateY(-100px); }
-        .sub-buttons .sub-button:nth-child(9) { transform: translate(-50%, -50%) translateX(650px) translateY(-100px); }
-    
-        .sub-buttons .sub-button:nth-child(10) { transform: translate(-50%, -50%) translateX(-650px) translateY(200px); }
-        .sub-buttons .sub-button:nth-child(11) { transform: translate(-50%, -50%) translateX(-650px) translateY(200px);}
-        .sub-buttons .sub-button:nth-child(12) { transform: translate(-50%, -50%) translateX(-650px) translateY(200px);}
-        .sub-buttons .sub-button:nth-child(13) { transform: translate(-50%, -50%) translateX(-650px) translateY(200px) ;}
-        .sub-buttons .sub-button:nth-child(14) { transform: translate(-50%, -50%) translateX(-650px) translateY(200px);}
-        .sub-buttons .sub-button:nth-child(15) { transform: translate(-50%, -50%) translateX(-650px) translateY(200px); }
-        .sub-buttons .sub-button:nth-child(16) { transform: translate(-50%, -50%) translateX(-650px) translateY(200px) ;}
-        .sub-buttons .sub-button:nth-child(17) { transform: translate(-50%, -50%) translateX(-650px) translateY(200px);}
-        .sub-buttons .sub-button:nth-child(18) { transform: translate(-50%, -50%) translateX(-650px) translateY(200px) ;}
+        .sub-buttons .sub-button:nth-child(1) { transform: rotate(0deg) translateX(200px); }
+        .sub-buttons .sub-button:nth-child(2) { transform: rotate(20deg) translateX(200px); }
+        .sub-buttons .sub-button:nth-child(3) { transform: rotate(40deg) translateX(200px); }
+        .sub-buttons .sub-button:nth-child(4) { transform: rotate(60deg) translateX(200px); }
+        .sub-buttons .sub-button:nth-child(5) { transform: rotate(80deg) translateX(200px); }
+        .sub-buttons .sub-button:nth-child(6) { transform: rotate(100deg) translateX(200px); }
+        .sub-buttons .sub-button:nth-child(7) { transform: rotate(120deg) translateX(200px); }
+        .sub-buttons .sub-button:nth-child(8) { transform: rotate(140deg) translateX(200px); }
+        .sub-buttons .sub-button:nth-child(9) { transform: rotate(160deg) translateX(200px); }
+        .sub-buttons .sub-button:nth-child(10) { transform: rotate(-20deg) translateX(200px); }
+        .sub-buttons .sub-button:nth-child(11) { transform: rotate(-40deg) translateX(200px); }
+        .sub-buttons .sub-button:nth-child(12) { transform: rotate(-60deg) translateX(200px); }
+        .sub-buttons .sub-button:nth-child(13) { transform: rotate(-80deg) translateX(200px); }
+        .sub-buttons .sub-button:nth-child(14) { transform: rotate(-100deg) translateX(200px); }
+        .sub-buttons .sub-button:nth-child(15) { transform: rotate(-120deg) translateX(200px); }
+        .sub-buttons .sub-button:nth-child(16) { transform: rotate(-140deg) translateX(200px); }
+        .sub-buttons .sub-button:nth-child(17) { transform: rotate(-160deg) translateX(200px); }
+        .sub-buttons .sub-button:nth-child(18) { transform: rotate(-180deg) translateX(200px); }
         
         .advertisebody {
             font-family: Arial, sans-serif;
